@@ -65,7 +65,7 @@
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>$(SolutionDir).nuget\nuget spec -f "$(ProjectPath)" 
+    <PostBuildEvent>$(SolutionDir).nuget\nuget spec -Force "$(ProjectPath)" 
 $(SolutionDir).nuget\nuget pack "$(ProjectPath)"  
 </PostBuildEvent>
   </PropertyGroup>
